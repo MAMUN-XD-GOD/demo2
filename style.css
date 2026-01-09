@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #111a2e, #05070f);
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.app {
+  width: 380px;
+  margin: 40px auto;
+  padding: 25px;
+  background: rgba(18, 24, 42, 0.95);
+  border-radius: 14px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.owner {
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+select, input, button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+button {
+  background: linear-gradient(90deg, #4da3ff, #7cf3ff);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+pre {
+  margin-top: 15px;
+  background: #0a0f1f;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  overflow-x: auto;
+}
