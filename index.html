@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChartMind AI</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>ChartMind AI</h1>
+  <p class="owner">Owner: David Mamun William</p>
+
+  <form id="form">
+    <select name="mode">
+      <option value="binary">Binary</option>
+      <option value="forex">Forex / Crypto</option>
+    </select>
+
+    <input type="file" name="chart" accept="image/*" required>
+    <button type="submit">Analyze Chart</button>
+  </form>
+
+  <div id="result"></div>
+</div>
+
+<script>
+document.getElementById("form").onsubmit = async (e) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const res = await fetch("/", { method: "POST", body: formData });
+  const data = await res.json();
+  document.getElementById("result").innerHTML =
+    "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+};
+</script>
+
+</body>
+    </html>
